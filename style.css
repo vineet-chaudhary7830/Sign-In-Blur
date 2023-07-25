@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom,#f1f4f9,#dff1ff);
+    /* filter: blur(100px); */
+}
+section .colors{
+    position: absolute;
+    filter: blur(110px);
+}
+section .colors:nth-child(1){
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+section .colors:nth-child(2){
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+}
+section .colors:nth-child(3){
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    margin-top: 120px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1), -0px -25px 45px rgba(0, 0, 0, 0.2);
+    position: relative;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);;
+}
+.form{
+    position: relative;
+}
+.main .form .name{
+    font-family: sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    font-size: 1.9rem;
+    font-weight: bold;
+    position: relative;
+    left: -70px;
+    top: 30px;
+}
+.main .form .name::after{
+    content: '';
+    position: absolute;
+    top: 43px;
+    left: 58px;
+    height: 5px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.form1{
+    position: relative;
+    top: 70px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+.inputs input{
+    position: relative;
+    left: -20px;
+    padding: 9px;
+    width: 280px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding-left: 13px;
+}
+.inputs input::placeholder{
+    color: #ffffff;
+}
+.main .form .button{
+    background: #ffffff;
+    color: #666;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    padding-top: 4.5px;
+    letter-spacing: 0.7px;
+    font-size: 1.1rem;
+    position: relative;
+    left: -17px;
+    cursor: pointer;
+}
+.para{
+    position: relative;
+    left: -30px;
+    margin-top: 20px;
+    color: #ffffff;
+    text-shadow: 20px rgba(0, 0, 0, 0.15);
+}
+.para a{
+    color: #ffffff;
+    font-weight: 600;
+}
+.para p:nth-child(1){
+    position: relative;
+    left: -25px;
+    margin-bottom: 8px;
+}
+.para p:nth-child(2){
+    position: relative;
+    left: -12px;
+    
+}
+
+.squares .boxes{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1), -0px -25px 45px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s*var(--i));
+}
+@keyframes animate{
+    0%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+.squares .boxes:nth-child(1){
+    height: 100px;
+    width: 100px;
+    top: 70px;
+    right: 430px;
+}
+.squares .boxes:nth-child(2){
+    height: 100px;
+    width: 100px;
+    top: 270px;
+    left: 400px;
+    z-index: 1;
+}
+.squares .boxes:nth-child(3){
+    height: 70px;
+    width: 70px;
+    top: 370px;
+    right: 430px;
+    z-index: 1;
+}
+.squares .boxes:nth-child(4){
+    height: 50px;
+    width: 50px;
+    top: 20px;
+    left: 600px;
+}
+.squares .boxes:nth-child(5){
+    height: 50px;
+    width: 50px;
+    bottom: 70px;
+    left: 590px;
+}
